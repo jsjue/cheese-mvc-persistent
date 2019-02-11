@@ -1,0 +1,54 @@
+package org.launchcode.cheesemvc.models;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import org.launchcode.models.Cheese;
+
+@Entity
+public class Category {
+    @Id
+    @GeneratedValue
+    private int id;
+
+    @NotNull
+    @Size(min = 3,  max = 15)
+    private String name;
+
+    private String description;
+
+
+    @OneToMany
+    @JoinColumn(name = "category_id")
+    private List<Cheese> cheeses = new ArrayList<>();
+
+    public Category() {
+
+    }
+
+    public int getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description){
+        this.description = description;
+    }
+
+    public List<Cheese> getCheeses() {
+        return cheeses;
+    }
+}
