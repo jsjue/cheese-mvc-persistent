@@ -21,11 +21,9 @@
     </tr>
 
     <tr th:each="cheese : ${cheeses}">
-        <td th:text="${cheese.name}" + ' (' + ${cheese.id}></td>
+        <td th:text="${cheese.name} + ' (' + ${cheese.id} + ')'"></td>
         <td th:text="${cheese.description}"></td>
-        <td th:text="${cheese.category.getName}"></td>
-
-
+        <td th:text="${cheese.category}"></td>
 
     </tr>
 

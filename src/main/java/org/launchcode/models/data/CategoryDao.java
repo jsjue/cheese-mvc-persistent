@@ -8,5 +8,5 @@ import javax.transaction.Transactional;
 @Repository
 @Transactional
 
-public interface CategoryDao extends CrudRepository<org.launchcode.cheesemvc.models.Category, Integer> {
+public interface CategoryDao extends CrudRepository<org.launchcode.models.Category, Integer> {
 }

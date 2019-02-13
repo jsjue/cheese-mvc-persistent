@@ -26,7 +26,7 @@ public class Cheese {
     private String description;
 
     @ManyToOne
-    private org.launchcode.cheesemvc.models.Category category;
+    private org.launchcode.models.Category category;
 
 
     @ManyToMany(mappedBy = "cheeses")
@@ -62,11 +62,11 @@ public class Cheese {
         this.description = description;
     }
 
-    public org.launchcode.cheesemvc.models.Category getCategory() {
+    public org.launchcode.models.Category getCategory() {
         return category;
     }
 
-    public void setCategory (org.launchcode.cheesemvc.models.Category category) {
+    public void setCategory (org.launchcode.models.Category category) {
         this.category = category;
     }
 

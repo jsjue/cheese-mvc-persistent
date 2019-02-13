@@ -1,13 +1,10 @@
-package org.launchcode.cheesemvc.models;
+package org.launchcode.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
-
-
-import org.launchcode.models.Cheese;
 
 @Entity
 public class Category {
